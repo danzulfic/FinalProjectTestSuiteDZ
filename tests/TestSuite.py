@@ -84,55 +84,55 @@ def test_setting_order_information_for_productName():
     order_information.set_productName("Steak")
     assert order_information.get_productName() == "Steak", "order should contain steak"
 
-#Test to ensure that Order Information in terms of  of products purchase is working correctly
+#Test to ensure that Order Information in terms of ProductIds of products purchased is working correctly
 def test_setting_order_information_for_productId():
     order_information = OrderInformation()
     order_information.set_productId("4476")
     assert order_information.get_productId() == "4476", "product id should be 4476"
 
-
+#Test to ensure that Order Information in terms of user allergies of products purchased is working correctly
 def test_setting_order_information_for_allergies():
     order_information = OrderInformation()
     order_information.set_allergies("no allergies")
     assert order_information.get_allergies() == "no allergies", "customer should have no allergies"
 
-
+#Test to ensure that Order Information in terms of additional user comments or requests of products purchased is working correctly
 def test_setting_order_information_for_comments():
     order_information = OrderInformation()
     order_information.set_comments("steak medium rare")
     assert order_information.get_comments() == "steak medium rare", "user should be asking for medium rare steak"
 
-
+#Payment test to ensure a random paymentId between 1000 and 2000 has been successfully created
 def test_to_check_paymentId_between_preset_values():
     payment = Payment()
     assert (payment.get_paymentId() >= 1000) & (
                 payment.get_paymentId() <= 2000), "the payment id should be between 1000 and 2000"
 
-
+#Payment test to verify that payment type is correctly verified by system
 def test_setting_payment_type():
     payment = Payment()
     payment.set_paymentType("Visa")
     assert payment.get_paymentType() == "Visa", "payment type should be Visa"
 
-
+#Payment test to verify payment is being completed in correct currency
 def test_setting_payment_currency():
     payment = Payment()
     payment.set_currency("CAD")
     assert payment.get_currency() == "CAD", "payment currency should be CAD"
 
-
+#Payment test to verify payment date is being processed correctly
 def test_setting_payment_date():
     payment = Payment()
     payment.set_paymentDate("12/03/2020")
     assert payment.get_paymentDate() == "12/03/2020", "payment date should be 12/03/2020"
 
-
+#Tracking test to ensure system is creating a unique trackingId between 2001 and 3000
 def test_to_check_trackingId_between_preset_values():
     tracking = Tracking()
     assert (tracking.get_trackingId() >= 2001) & (
                 tracking.get_trackingId() <= 3000), "the tracking id should be between 2001 and 3000"
 
-
+#Tracking test to calculate a delivery time based on food prep time and delivery time
 def test_to_calculate_delivery_time():
     tracking = Tracking()
     tracking.calculate_deliveryTime(15, 25)

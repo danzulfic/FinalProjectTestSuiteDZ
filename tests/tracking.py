@@ -1,3 +1,11 @@
+# tracking.py #
+# Author: Daniel Zulfic #
+# Teacher: Mr. Sean Watson #
+# Date: December 4th 2020 #
+# Copyright: Daniel Zulfic 2020 #
+# Completed test suite for Final Project
+
+
 import random
 
 
